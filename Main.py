@@ -36,6 +36,7 @@ def update_profile():
 
 scheduler = BackgroundScheduler()
 scheduler.add_job(update_profile, "interval", minutes=1)
-scheduler.start()
 
-app.run()
+if __name__ == "__main__":
+    scheduler.start()
+    app.run()
